@@ -8,7 +8,7 @@ namespace EFCore.Works
         public DbSet<Post> Posts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-        => options.UseSqlServer($"Data Source=.;Initial Catalog=EFTest;Integrated Security=True");
+        => options.UseSqlServer($"Data Source=.;Initial Catalog=EFTest;Integrated Security=True;TrustServerCertificate=True");
     }
 
     public class Blog
